@@ -32,113 +32,117 @@ const Hero = () => {
 	return (
 		<section
 			id="inicio"
-			className="bg-page-bg min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 pt-16 transition-colors duration-300"
+			className="bg-page-bg min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 pb-12 transition-colors duration-300"
 		>
 			<div
 				ref={ref as React.RefObject<HTMLDivElement>}
-				className={`w-full max-w-5xl mx-auto space-y-12 animate-on-scroll ${isVisible ? "visible" : ""}`}
+				className={`w-full max-w-5xl mx-auto animate-on-scroll ${isVisible ? "visible" : ""}`}
 			>
-				{/* Título + avatar */}
-				<div className="flex flex-col-reverse md:flex-row items-center justify-center gap-10 md:gap-20 w-full px-4">
-					<div className="text-center md:text-left max-w-2xl">
-						<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-main tracking-tight leading-tight">
-							{t.hero.title[0]} <br />
+				<div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 lg:gap-14">
+					{/* Columna Izquierda: Información */}
+					<div className="flex-1 text-center lg:text-left space-y-6 max-w-2xl">
+						{/* Título Principal */}
+						<h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-main tracking-tight leading-tight">
+							<span className="block text-accent font-semibold text-lg sm:text-xl tracking-wide mb-2">
+								{t.hero.title[0]}
+							</span>
 							{t.hero.title[1]}
 						</h1>
+
+						{/* Descripción */}
+						<div className="text-text-muted font-light text-base sm:text-lg leading-relaxed space-y-3">
+							<p>{renderDescription(t.hero.description)}</p>
+							<p>{renderDescription(t.hero.description2)}</p>
+							<p>{renderDescription(t.hero.description3)}</p>
+						</div>
+
+						{/* Acciones: Botón CV y Redes Sociales */}
+						<div className="pt-2 space-y-6">
+							{/* Botón Descargar CV */}
+							<div className="flex justify-center lg:justify-start">
+								<a
+									href="/docs/cv.pdf"
+									download
+									className="bg-accent hover:opacity-90 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-[0_0_15px_var(--accent)]"
+								>
+									{t.hero.cv}
+								</a>
+							</div>
+
+							{/* Redes sociales */}
+							<div className="flex flex-wrap items-center justify-center lg:justify-start gap-5 sm:gap-6 text-sm sm:text-base">
+								<a
+									href="https://github.com/ivndv"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="flex items-center gap-1.5 text-text-muted hover:text-accent transition-colors"
+								>
+									<span
+										className="icon-[mdi--github] text-lg text-text-main"
+										aria-hidden="true"
+									/>
+									{t.hero.social[0]} <ArrowUpRight size={16} />
+								</a>
+								<a
+									href="https://www.linkedin.com/in/ivan-cruz-1906mx"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="flex items-center gap-1.5 text-text-muted hover:text-accent transition-colors"
+								>
+									<span
+										className="icon-[mdi--linkedin] text-lg text-text-main"
+										aria-hidden="true"
+									/>
+									{t.hero.social[1]} <ArrowUpRight size={16} />
+								</a>
+
+								<a
+									href="https://discord.com/users/ivndv1"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="flex items-center gap-1.5 text-text-muted hover:text-accent transition-colors"
+								>
+									<span
+										className="icon-[mdi--discord] text-lg text-text-main"
+										aria-hidden="true"
+									/>
+									{t.hero.social[2]} <ArrowUpRight size={16} />
+								</a>
+
+								<a
+									href="https://app.aluracursos.com/user/ivndv1"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="flex items-center gap-1.5 text-text-muted hover:text-accent transition-colors"
+								>
+									<span className="font-bold text-lg text-text-main leading-none">
+										a
+									</span>{" "}
+									{t.hero.social[3]} <ArrowUpRight size={16} />
+								</a>
+
+								<a
+									href="https://codigofacilito.com/usuarios/ivndv"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="flex items-center gap-1.5 text-text-muted hover:text-accent transition-colors"
+								>
+									<GraduationCap size={18} className="text-text-main" />{" "}
+									{t.hero.social[4]} <ArrowUpRight size={16} />
+								</a>
+							</div>
+						</div>
 					</div>
 
-					{/* Avatar */}
-					<div className="relative group flex-shrink-0">
-						<img
-							src="https://avatars.githubusercontent.com/u/157653669?s=400&u=883ac80aa9d82dd7d1b3eaa81fa500ca2060640f&v=4"
-							alt={t.hero.alt}
-							className="w-32 h-32 md:w-48 md:h-48 rounded-full object-cover shadow-2xl transition-all duration-500 border-2 border-surface-border group-hover:border-accent"
-						/>
-					</div>
-				</div>
-
-				<div className="flex flex-col items-center gap-10">
-					{/* Descripción */}
-					<div className="max-w-4xl text-center">
-						<p className="text-text-muted font-light sm:text-base text-[4vw]">
-							{renderDescription(t.hero.description)}
-							<br />
-							{renderDescription(t.hero.description2)}
-							<br />
-							{renderDescription(t.hero.description3)}
-						</p>
-					</div>
-
-					{/* Redes sociales */}
-					<div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 text-sm md:text-base">
-						<a
-							href="https://github.com/Ivandv19"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="flex items-center gap-1 text-text-muted hover:text-accent transition-colors"
-						>
-							<span
-								className="icon-[mdi--github] text-white"
-								aria-hidden="true"
+					{/* Columna Derecha: Avatar */}
+					<div className="flex-shrink-0 flex justify-center lg:justify-end">
+						<div className="relative group p-2 rounded-full border-2 border-surface-border bg-surface-bg shadow-2xl transition-all duration-500 hover:border-accent">
+							<img
+								src="https://avatars.githubusercontent.com/u/157653669?s=400&u=883ac80aa9d82dd7d1b3eaa81fa500ca2060640f&v=4"
+								alt={t.hero.alt}
+								className="w-40 h-40 sm:w-52 sm:h-52 lg:w-64 lg:h-64 rounded-full object-cover shadow-inner"
 							/>
-							{t.hero.social[0]} <ArrowUpRight size={16} />
-						</a>
-						<a
-							href="https://www.linkedin.com/in/ivan-cruz-1906mx"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="flex items-center gap-1 text-text-muted hover:text-accent transition-colors"
-						>
-							<span
-								className="icon-[mdi--linkedin] text-white"
-								aria-hidden="true"
-							/>
-							{t.hero.social[1]} <ArrowUpRight size={16} />
-						</a>
-
-						<a
-							href="https://discord.com/users/ivandv19"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="flex items-center gap-1 text-text-muted hover:text-accent transition-colors"
-						>
-							<span
-								className="icon-[mdi--discord] text-white"
-								aria-hidden="true"
-							/>{" "}
-							{t.hero.social[2]} <ArrowUpRight size={16} />
-						</a>
-
-						<a
-							href="https://app.aluracursos.com/user/ivanmx19"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="flex items-center gap-1 text-text-muted hover:text-accent transition-colors"
-						>
-							<span className="font-bold text-lg">a</span> {t.hero.social[3]}{" "}
-							<ArrowUpRight size={16} />
-						</a>
-
-						<a
-							href="https://codigofacilito.com/usuarios/Ivandv19"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="flex items-center gap-1 text-text-muted hover:text-accent transition-colors"
-						>
-							<GraduationCap size={18} /> {t.hero.social[4]}{" "}
-							<ArrowUpRight size={16} />
-						</a>
-					</div>
-
-					{/* Descargar CV */}
-					<div className="w-full flex justify-center">
-						<a
-							href="/docs/cv.pdf"
-							download
-							className="bg-accent hover:opacity-90 text-white font-bold py-3 px-8 rounded-md transition-all duration-300 shadow-[0_0_15px_var(--accent)]"
-						>
-							{t.hero.cv}
-						</a>
+						</div>
 					</div>
 				</div>
 			</div>

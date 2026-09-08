@@ -1,7 +1,8 @@
 // React
-import { useEffect } from "react";
+
 // Iconos
 import { ArrowUpRight, GraduationCap } from "lucide-react";
+import { useEffect } from "react";
 // Hooks
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useTranslation } from "@/hooks/useTranslation";
@@ -12,7 +13,9 @@ const Hero = () => {
 	const t = useTranslation();
 
 	// 1. Actualizar título SEO
-	useEffect(() => { document.title = t.seo.hero; }, [t.seo.hero]);
+	useEffect(() => {
+		document.title = t.seo.hero;
+	}, [t.seo.hero]);
 
 	// 2. Renderizar texto con partes en negrita
 	const renderDescription = (parts: { text: string; bold: boolean }[]) =>

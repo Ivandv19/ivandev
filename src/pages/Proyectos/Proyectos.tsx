@@ -1,5 +1,5 @@
 // React
-import { useEffect } from "react";
+
 // Iconos
 import {
 	BookOpen,
@@ -10,11 +10,12 @@ import {
 	MonitorPlay,
 	Rocket,
 } from "lucide-react";
+import { useEffect } from "react";
+// Datos
+import { projects } from "@/data/projects";
 // Hooks
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useTranslation } from "@/hooks/useTranslation";
-// Datos
-import { projects } from "@/data/projects";
 
 // Proyectos
 const Projects = () => {
@@ -22,7 +23,9 @@ const Projects = () => {
 	const t = useTranslation();
 
 	// 1. Actualizar título SEO
-	useEffect(() => { document.title = t.seo.proyectos; }, [t.seo.proyectos]);
+	useEffect(() => {
+		document.title = t.seo.proyectos;
+	}, [t.seo.proyectos]);
 
 	return (
 		<section className="min-h-screen bg-page-bg text-text-main py-20 px-4 sm:px-6 lg:px-8">

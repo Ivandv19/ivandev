@@ -1,5 +1,5 @@
 // React
-import { useEffect } from "react";
+
 // Iconos
 import {
 	Bot,
@@ -20,6 +20,7 @@ import {
 	Users,
 	Zap,
 } from "lucide-react";
+import { useEffect } from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useTranslation } from "@/hooks/useTranslation";
 
@@ -29,7 +30,9 @@ const Skills = () => {
 	const t = useTranslation();
 
 	// 1. Actualizar título SEO
-	useEffect(() => { document.title = t.seo.skills; }, [t.seo.skills]);
+	useEffect(() => {
+		document.title = t.seo.skills;
+	}, [t.seo.skills]);
 
 	// Categorías de habilidades
 	const skillCategories = [

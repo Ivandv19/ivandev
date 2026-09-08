@@ -4,10 +4,10 @@ import { Menu, Moon, Sun, X } from "lucide-react";
 import { useState } from "react";
 // React Router
 import { Link } from "react-router-dom";
-// Store
-import { useAppStore } from "@/store/appStore";
 // Hooks
 import { useTranslation } from "@/hooks/useTranslation";
+// Store
+import { useAppStore } from "@/store/appStore";
 
 // Header
 const Header = () => {
@@ -21,7 +21,15 @@ const Header = () => {
 	// 1. Mapear nombres de navegación desde traducciones
 	const navLinks = t.header.navLinks.map((name, i) => ({
 		name,
-		path: ["/", "/skills", "/experiencia", "/proyectos", "/sobre-mi", "/formacion", "/contacto"][i],
+		path: [
+			"/",
+			"/skills",
+			"/experiencia",
+			"/proyectos",
+			"/sobre-mi",
+			"/formacion",
+			"/contacto",
+		][i],
 	}));
 
 	return (

@@ -3,7 +3,9 @@ import { useEffect } from "react";
 
 // Privacidad
 const Privacidad = () => {
-	useEffect(() => { document.title = "Privacidad | Ivan Cruz"; }, []);
+	useEffect(() => {
+		document.title = "Privacidad | Ivan Cruz";
+	}, []);
 	return (
 		<div className="min-h-screen bg-page-bg text-text-main pt-32 pb-20 transition-colors duration-300">
 			<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

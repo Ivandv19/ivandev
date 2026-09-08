@@ -21,7 +21,13 @@ const NotFound = lazy(() => import("@/pages/NotFound/NotFound"));
 export const Router = () => {
 	return (
 		// Suspense con fallback de carga
-		<Suspense fallback={<div className="min-h-screen flex items-center justify-center text-text-muted">Cargando...</div>}>
+		<Suspense
+			fallback={
+				<div className="min-h-screen flex items-center justify-center text-text-muted">
+					Cargando...
+				</div>
+			}
+		>
 			{/* Layout con páginas anidadas */}
 			<Routes>
 				<Route element={<Layout />}>

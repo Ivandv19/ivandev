@@ -165,17 +165,20 @@ const Footer = () => {
 				<div className="flex flex-col items-center space-y-8">
 					<div className="text-center">
 						<p className="text-xs uppercase tracking-[0.2em] text-text-muted font-bold mb-4">
-							{t.footer.desarrolladoPor} <span className="text-text-main">Ivan Cruz</span>
+							{t.footer.desarrolladoPor}{" "}
+							<span className="text-text-main">Ivan Cruz</span>
 						</p>
 						<div className="flex flex-wrap justify-center gap-2">
-							{["React", "Tailwind", "Hono", "GitHub", "Cloudflare"].map((tech) => (
-								<span
-									key={tech}
-									className="px-4 py-1.5 bg-accent/5 border border-accent/10 rounded-full text-[10px] font-bold uppercase tracking-wider text-text-muted hover:border-accent/30 hover:bg-accent/10 transition-all duration-300 cursor-default"
-								>
-									{tech}
-								</span>
-							))}
+							{["React", "Tailwind", "Hono", "GitHub", "Cloudflare"].map(
+								(tech) => (
+									<span
+										key={tech}
+										className="px-4 py-1.5 bg-accent/5 border border-accent/10 rounded-full text-[10px] font-bold uppercase tracking-wider text-text-muted hover:border-accent/30 hover:bg-accent/10 transition-all duration-300 cursor-default"
+									>
+										{tech}
+									</span>
+								),
+							)}
 						</div>
 					</div>
 

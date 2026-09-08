@@ -1,7 +1,8 @@
 // React
-import { useEffect } from "react";
+
 // Iconos
 import { Briefcase, Building2, Calendar, MapPin } from "lucide-react";
+import { useEffect } from "react";
 // Hooks
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useTranslation } from "@/hooks/useTranslation";
@@ -12,7 +13,9 @@ const Experience = () => {
 	const t = useTranslation();
 
 	// 1. Actualizar título SEO
-	useEffect(() => { document.title = t.seo.experiencia; }, [t.seo.experiencia]);
+	useEffect(() => {
+		document.title = t.seo.experiencia;
+	}, [t.seo.experiencia]);
 	// Datos de experiencia laboral
 	const experienceData = [
 		{

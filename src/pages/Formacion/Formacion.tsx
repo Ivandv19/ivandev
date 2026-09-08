@@ -1,5 +1,5 @@
 // React
-import { useEffect } from "react";
+
 // Iconos
 import {
 	Award,
@@ -8,6 +8,7 @@ import {
 	CheckCircle2,
 	GraduationCap,
 } from "lucide-react";
+import { useEffect } from "react";
 // Hooks
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useTranslation } from "@/hooks/useTranslation";
@@ -18,7 +19,9 @@ const Formacion = () => {
 	const t = useTranslation();
 
 	// 1. Actualizar título SEO
-	useEffect(() => { document.title = t.seo.formacion; }, [t.seo.formacion]);
+	useEffect(() => {
+		document.title = t.seo.formacion;
+	}, [t.seo.formacion]);
 	// Datos de formación académica
 	const educationData = [
 		// Código Facilito
@@ -131,7 +134,9 @@ const Formacion = () => {
 											<BookOpen size={16} className="text-accent" />
 											{edu.institution}
 										</span>
-										<span className="hidden md:inline text-surface-border">|</span>
+										<span className="hidden md:inline text-surface-border">
+											|
+										</span>
 										<span className="flex items-center gap-1.5 bg-surface-border/50 px-3 py-1 rounded-full text-sm text-text-main">
 											<Calendar size={14} />
 											{edu.date}

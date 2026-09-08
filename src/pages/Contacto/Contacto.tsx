@@ -24,7 +24,9 @@ const Contacto = () => {
 	const t = useTranslation();
 
 	// 2. Actualizar título SEO
-	useEffect(() => { document.title = t.seo.contacto; }, [t.seo.contacto]);
+	useEffect(() => {
+		document.title = t.seo.contacto;
+	}, [t.seo.contacto]);
 
 	// 3. Estado del formulario
 	const [form, setForm] = useState({
@@ -77,9 +79,7 @@ const Contacto = () => {
 			setTurnstileToken(null);
 		} catch (err) {
 			setStatus("error");
-			setErrorMsg(
-				err instanceof Error ? err.message : t.contacto.error,
-			);
+			setErrorMsg(err instanceof Error ? err.message : t.contacto.error);
 		}
 	};
 
@@ -179,8 +179,12 @@ const Contacto = () => {
 								<MapPin size={24} />
 							</div>
 							<div>
-								<h3 className="font-bold text-text-main">{t.contacto.ubicacionTitulo}</h3>
-								<p className="text-text-muted text-sm">{t.contacto.ubicacionValor}</p>
+								<h3 className="font-bold text-text-main">
+									{t.contacto.ubicacionTitulo}
+								</h3>
+								<p className="text-text-muted text-sm">
+									{t.contacto.ubicacionValor}
+								</p>
 							</div>
 						</div>
 					</div>
@@ -188,7 +192,9 @@ const Contacto = () => {
 					{/* Formulario */}
 					<div className="lg:col-span-3">
 						<div className="bg-surface-bg p-8 md:p-10 rounded-2xl border border-surface-border shadow-lg">
-							<h3 className="text-2xl font-bold mb-6">{t.contacto.formTitulo}</h3>
+							<h3 className="text-2xl font-bold mb-6">
+								{t.contacto.formTitulo}
+							</h3>
 
 							{/* Mensaje de éxito */}
 							{status === "success" && (
@@ -299,7 +305,9 @@ const Contacto = () => {
 									) : (
 										<Send size={20} />
 									)}
-									{status === "loading" ? t.contacto.enviando : t.contacto.enviar}
+									{status === "loading"
+										? t.contacto.enviando
+										: t.contacto.enviar}
 								</button>
 							</form>
 						</div>

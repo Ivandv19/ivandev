@@ -1,7 +1,8 @@
 // React
-import { useEffect } from "react";
+
 // Iconos
 import { Briefcase, GraduationCap, MapPin, User } from "lucide-react";
+import { useEffect } from "react";
 // Hooks
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useTranslation } from "@/hooks/useTranslation";
@@ -12,7 +13,9 @@ const SobreMi = () => {
 	const t = useTranslation();
 
 	// 1. Actualizar título SEO
-	useEffect(() => { document.title = t.seo.sobreMi; }, [t.seo.sobreMi]);
+	useEffect(() => {
+		document.title = t.seo.sobreMi;
+	}, [t.seo.sobreMi]);
 
 	// 2. Renderizar párrafo con partes en negrita
 	const renderParrafo = (parts: { text: string; bold: boolean }[]) =>
@@ -62,7 +65,9 @@ const SobreMi = () => {
 										<span className="block text-xs font-bold text-text-muted/70 uppercase tracking-wider">
 											{t.sobreMi.edad}
 										</span>
-										<span className="font-medium text-text-main">{t.sobreMi.edadValor}</span>
+										<span className="font-medium text-text-main">
+											{t.sobreMi.edadValor}
+										</span>
 									</div>
 								</li>
 
@@ -74,7 +79,9 @@ const SobreMi = () => {
 										<span className="block text-xs font-bold text-text-muted/70 uppercase tracking-wider">
 											{t.sobreMi.ubicacion}
 										</span>
-										<span className="font-medium text-text-main">{t.sobreMi.ubicacionValor}</span>
+										<span className="font-medium text-text-main">
+											{t.sobreMi.ubicacionValor}
+										</span>
 									</div>
 								</li>
 
@@ -86,7 +93,9 @@ const SobreMi = () => {
 										<span className="block text-xs font-bold text-text-muted/70 uppercase tracking-wider">
 											{t.sobreMi.formacion}
 										</span>
-										<span className="font-medium text-text-main">{t.sobreMi.formacionValor}</span>
+										<span className="font-medium text-text-main">
+											{t.sobreMi.formacionValor}
+										</span>
 									</div>
 								</li>
 

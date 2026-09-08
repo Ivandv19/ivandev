@@ -16,7 +16,7 @@ export default defineConfig({
 	// Alias de imports
 	resolve: {
 		alias: {
-			"@": path.resolve(__dirname, "./src"),
+			"@": path.resolve(import.meta.dirname, "./src"),
 		},
 	},
 	// Tests

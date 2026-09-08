@@ -21,6 +21,7 @@ import {
 	Zap,
 } from "lucide-react";
 import { useEffect } from "react";
+// Hooks
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useTranslation } from "@/hooks/useTranslation";
 
@@ -39,182 +40,153 @@ const Skills = () => {
 		// Frontend
 		{
 			title: "Frontend",
-			description: "",
 			skills: [
-				{ name: "HTML5", icon: <Layout />, level: "Avanzado" },
-				{ name: "CSS3", icon: <Palette />, level: "Avanzado" },
-				{ name: "JavaScript", icon: <Code2 />, level: "Intermedio" },
-				{ name: "TypeScript", icon: <Code2 />, level: "Intermedio" },
-				{ name: "React", icon: <Cpu />, level: "Intermedio" },
-				{ name: "Tailwind CSS", icon: <Palette />, level: "Intermedio" },
-				{ name: "Astro", icon: <Zap />, level: "Intermedio" },
-				{ name: "Angular", icon: <Layout />, level: "Intermedio" },
-				{ name: "Next.js", icon: <Globe />, level: "Básico" },
+				{ name: "HTML5", icon: <Layout size={20} /> },
+				{ name: "CSS3", icon: <Palette size={20} /> },
+				{ name: "JavaScript", icon: <Code2 size={20} /> },
+				{ name: "TypeScript", icon: <Code2 size={20} /> },
+				{ name: "React", icon: <Cpu size={20} /> },
+				{ name: "Tailwind CSS", icon: <Palette size={20} /> },
+				{ name: "Astro", icon: <Zap size={20} /> },
+				{ name: "Angular", icon: <Layout size={20} /> },
+				{ name: "Next.js", icon: <Globe size={20} /> },
 			],
 		},
 		// Backend
 		{
 			title: "Backend",
-			description: "",
 			skills: [
-				{ name: "Node.js", icon: <Server />, level: "Intermedio" },
-				{ name: "Express", icon: <Server />, level: "Intermedio" },
-				{ name: "Hono", icon: <Server />, level: "Intermedio" },
-				{ name: "MySQL", icon: <Database />, level: "Intermedio" },
-				{ name: "Drizzle ORM", icon: <Database />, level: "Intermedio" },
-				{ name: "REST APIs", icon: <Globe />, level: "Intermedio" },
-				{ name: "Zod", icon: <ShieldCheck />, level: "Intermedio" },
-				{ name: "Better Auth", icon: <ShieldCheck />, level: "Básico" },
-				{ name: "JWT", icon: <ShieldCheck />, level: "Intermedio" },
-				{ name: "Swagger", icon: <Globe />, level: "Intermedio" },
-				{ name: "Next.js (Fullstack)", icon: <Globe />, level: "Básico" },
+				{ name: "Node.js", icon: <Server size={20} /> },
+				{ name: "Express", icon: <Server size={20} /> },
+				{ name: "Hono", icon: <Server size={20} /> },
+				{ name: "MySQL", icon: <Database size={20} /> },
+				{ name: "Drizzle ORM", icon: <Database size={20} /> },
+				{ name: "REST APIs", icon: <Globe size={20} /> },
+				{ name: "Zod", icon: <ShieldCheck size={20} /> },
+				{ name: "Better Auth", icon: <ShieldCheck size={20} /> },
+				{ name: "JWT", icon: <ShieldCheck size={20} /> },
+				{ name: "Swagger", icon: <Globe size={20} /> },
+				{ name: "Next.js (Fullstack)", icon: <Globe size={20} /> },
 			],
 		},
 		// Herramientas & Control
 		{
 			title: "Herramientas & Control",
-			description: "",
 			skills: [
-				{ name: "Git", icon: <GitBranch />, level: "Intermedio" },
-				{ name: "GitHub", icon: <GitBranch />, level: "Intermedio" },
-				{ name: "npm / pnpm", icon: <Terminal />, level: "Intermedio" },
-				{ name: "Bun", icon: <Zap />, level: "Intermedio" },
-				{ name: "Vite", icon: <Zap />, level: "Intermedio" },
-				{ name: "Biome", icon: <Zap />, level: "Intermedio" },
-				{ name: "Postman", icon: <Globe />, level: "Intermedio API" },
+				{ name: "Git", icon: <GitBranch size={20} /> },
+				{ name: "GitHub", icon: <GitBranch size={20} /> },
+				{ name: "npm / pnpm", icon: <Terminal size={20} /> },
+				{ name: "Bun", icon: <Zap size={20} /> },
+				{ name: "Vite", icon: <Zap size={20} /> },
+				{ name: "Biome", icon: <Zap size={20} /> },
+				{ name: "Postman", icon: <Globe size={20} /> },
 			],
 		},
-		// Cloud Computing
+		// Cloud Computing & DevOps
 		{
-			title: "Cloud Computing",
-			description: "",
+			title: "Cloud Computing & DevOps",
 			skills: [
-				{ name: "Azure", icon: <Cloud />, level: "Básico" },
-				{ name: "Cloudflare", icon: <Cloud />, level: "Intermedio" },
-				{ name: "Oracle Cloud", icon: <Cloud />, level: "Básico" },
-			],
-		},
-		// DevOps
-		{
-			title: "DevOps",
-			description: "",
-			skills: [
-				{ name: "Docker", icon: <Box />, level: "Básico" },
-				{ name: "GitHub Actions", icon: <Zap />, level: "Básico" },
-			],
-		},
-		// En Desarrollo / Explorando
-		{
-			title: "En Desarrollo / Explorando",
-			description: "",
-			skills: [
-				{ name: "Vue", icon: <Layout />, level: "Aprendiendo" },
-				{ name: "Django", icon: <Server />, level: "Aprendiendo" },
-				{ name: "MongoDB", icon: <Database />, level: "Aprendiendo" },
-				{ name: "PostgreSQL", icon: <Database />, level: "Aprendiendo" },
-				{ name: "Python", icon: <Code2 />, level: "Aprendiendo" },
-				{ name: "Java", icon: <Code2 />, level: "Aprendiendo" },
-				{ name: "AWS", icon: <Cloud />, level: "Aprendiendo" },
-				{ name: "Google Cloud", icon: <Cloud />, level: "Aprendiendo" },
+				{ name: "Cloudflare", icon: <Cloud size={20} /> },
+				{ name: "Docker", icon: <Box size={20} /> },
+				{ name: "GitHub Actions", icon: <Zap size={20} /> },
+				{ name: "Azure", icon: <Cloud size={20} /> },
+				{ name: "Oracle Cloud", icon: <Cloud size={20} /> },
 			],
 		},
 		// QA & Testing
 		{
 			title: "QA & Testing",
-			description: "",
 			skills: [
-				{ name: "Jest", icon: <ShieldCheck />, level: "Básico" },
-				{ name: "Vitest", icon: <ShieldCheck />, level: "Intermedio" },
-				{ name: "React Testing", icon: <ShieldCheck />, level: "Básico" },
+				{ name: "Vitest", icon: <ShieldCheck size={20} /> },
+				{ name: "Jest", icon: <ShieldCheck size={20} /> },
+				{ name: "React Testing", icon: <ShieldCheck size={20} /> },
+			],
+		},
+		// En Desarrollo / Explorando
+		{
+			title: "En Desarrollo / Explorando",
+			skills: [
+				{ name: "Python", icon: <Code2 size={20} /> },
+				{ name: "Django", icon: <Server size={20} /> },
+				{ name: "PostgreSQL", icon: <Database size={20} /> },
+				{ name: "MongoDB", icon: <Database size={20} /> },
+				{ name: "Vue", icon: <Layout size={20} /> },
+				{ name: "AWS", icon: <Cloud size={20} /> },
+				{ name: "Java", icon: <Code2 size={20} /> },
+				{ name: "Google Cloud", icon: <Cloud size={20} /> },
+			],
+		},
+		// Inteligencia Artificial
+		{
+			title: "Inteligencia Artificial",
+			skills: [
+				{ name: "Claude", icon: <Brain size={20} /> },
+				{ name: "ChatGPT", icon: <Bot size={20} /> },
+				{ name: "GitHub Copilot", icon: <Sparkles size={20} /> },
+				{ name: "Gemini", icon: <Sparkles size={20} /> },
 			],
 		},
 		// Accesibilidad
 		{
 			title: "Accesibilidad",
-			description: "",
-			skills: [{ name: "WCAG / ARIA", icon: <Users />, level: "Básico" }],
+			skills: [{ name: "WCAG / ARIA", icon: <Users size={20} /> }],
 		},
-
-		// Inteligencia Artificial
-		{
-			title: "Inteligencia Artificial",
-			description: "",
-			skills: [
-				{ name: "ChatGPT", icon: <Bot />, level: "Intermedio" },
-				{ name: "Gemini", icon: <Sparkles />, level: "Intermedio" },
-				{ name: "GitHub Copilot", icon: <Sparkles />, level: "Intermedio" },
-				{ name: "Claude", icon: <Brain />, level: "Intermedio" },
-			],
-		},
-
 		// Habilidades Blandas
 		{
 			title: "Habilidades Blandas",
-			description: "",
 			skills: [
-				{ name: "Trabajo en Equipo", icon: <Users />, level: "Intermedio" },
-				{ name: "Resolución Problemas", icon: <Brain />, level: "Intermedio" },
-				{ name: "Comunicación", icon: <Users />, level: "Intermedio" },
-				{ name: "Adaptabilidad", icon: <Zap />, level: "Intermedio" },
-				{ name: "Aprendizaje Activo", icon: <Brain />, level: "Intermedio" },
-				{ name: "Pensamiento Crítico", icon: <Brain />, level: "Intermedio" },
+				{ name: "Trabajo en Equipo", icon: <Users size={20} /> },
+				{ name: "Resolución Problemas", icon: <Brain size={20} /> },
+				{ name: "Comunicación", icon: <Users size={20} /> },
+				{ name: "Adaptabilidad", icon: <Zap size={20} /> },
+				{ name: "Aprendizaje Activo", icon: <Brain size={20} /> },
+				{ name: "Pensamiento Crítico", icon: <Brain size={20} /> },
 			],
 		},
 	];
 
 	return (
-		<section className="min-h-screen bg-page-bg text-text-main py-20 px-4 sm:px-6 lg:px-8">
+		<section className="min-h-screen bg-page-bg text-text-main pt-32 pb-24 sm:pt-36 sm:pb-28 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
 			<div
 				ref={ref as React.RefObject<HTMLDivElement>}
-				className={`max-w-7xl mx-auto animate-on-scroll ${isVisible ? "visible" : ""}`}
+				className={`w-full max-w-5xl mx-auto animate-on-scroll ${isVisible ? "visible" : ""}`}
 			>
-				<div className="text-center mb-16 space-y-4 mt-16">
-					<h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+				{/* Encabezado */}
+				<div className="text-center mb-16 sm:mb-20 space-y-3">
+					<h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-text-main">
 						{t.skills.title}
 					</h2>
-					<p className="text-text-muted max-w-2xl mx-auto text-lg">
+					<p className="text-text-muted text-sm sm:text-base max-w-xl mx-auto font-normal leading-relaxed">
 						{t.skills.subtitle}
 					</p>
 				</div>
 
 				{/* Categorías */}
-				<div className="space-y-16">
+				<div className="space-y-12">
 					{skillCategories.map((category) => (
-						<div key={category.title} className="space-y-6">
-							<div className="flex items-center justify-center gap-4 mb-8">
-								<div className="h-px bg-text-main flex-1 rounded-full opacity-20"></div>
-
-								<h3 className="text-2xl font-bold text-text-main whitespace-nowrap text-center px-4">
+						<div key={category.title} className="space-y-5">
+							{/* Divisor de categoría */}
+							<div className="flex items-center justify-center gap-4">
+								<div className="h-px bg-surface-border flex-1" />
+								<h3 className="text-lg sm:text-xl font-bold text-text-main whitespace-nowrap text-center px-4 tracking-tight">
 									{category.title}
 								</h3>
-
-								<div className="h-px bg-text-main flex-1 rounded-full opacity-20"></div>
+								<div className="h-px bg-surface-border flex-1" />
 							</div>
 
-							{category.description && (
-								<p className="text-sm text-text-muted -mt-6 mb-6 text-center italic">
-									{category.description}
-								</p>
-							)}
-
-							<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+							{/* Grid de cuadrados técnicos compactos */}
+							<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-3.5">
 								{category.skills.map((skill) => (
 									<div
 										key={skill.name}
-										className="group relative bg-surface-bg border border-surface-border rounded-lg p-4 shadow-sm hover:border-accent hover:shadow-[0_0_15px_rgba(220,38,38,0.2)] hover:-translate-y-1 flex flex-col items-center justify-center gap-3 text-center"
+										className="group relative bg-surface-bg border border-surface-border rounded-md min-h-[104px] sm:min-h-[116px] py-4 sm:py-5 px-3 sm:px-3.5 flex flex-col items-center justify-center text-center gap-2.5 transition-all duration-200 hover:border-accent hover:shadow-[0_0_12px_rgba(220,38,38,0.15)] hover:-translate-y-0.5"
 									>
-										<div className="text-text-muted group-hover:text-accent">
+										<div className="text-text-muted group-hover:text-accent transition-colors duration-200 [&_svg]:w-5 [&_svg]:h-5 sm:[&_svg]:w-6 sm:[&_svg]:h-6">
 											{skill.icon}
 										</div>
-
-										<div>
-											<h4 className="font-semibold text-text-main text-sm">
-												{skill.name}
-											</h4>
-											<span className="text-[10px] text-text-muted group-hover:text-accent uppercase tracking-wider mt-1 block">
-												{skill.level}
-											</span>
-										</div>
+										<h4 className="font-semibold text-text-main text-xs sm:text-sm tracking-tight leading-snug">
+											{skill.name}
+										</h4>
 									</div>
 								))}
 							</div>

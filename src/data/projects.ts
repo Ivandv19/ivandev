@@ -19,7 +19,7 @@ export type Project = {
 
 // Proyectos
 export const projects: Project[] = [
-	// Fluxbeats
+	// 1. Fluxbeats
 	{
 		id: 1,
 		title: "Fluxbeats",
@@ -32,23 +32,10 @@ export const projects: Project[] = [
 			github: "https://github.com/ivndv/fluxbeats",
 		},
 	},
-	// Fluxdev Blog V1
-	{
-		id: 2,
-		title: "Fluxdev Blog V1",
-		description:
-			"Fluxdev blog es un gestor de contenido dise\u00f1ado como un espacio personal y profesional para compartir art\u00edculos, tutoriales y experiencias sobre el desarrollo web.",
-		image: "https://assets.portafolioweb.mgdc.site/fluxdev.png",
-		tags: ["Astro", "Cloudflare", "D1 (SQLite)", "TailwindCSS"],
-		links: {
-			demo: "https://fluxdev-nebula.mgdc.site/",
-			github: "https://github.com/ivndv/fluxdev-blog",
-		},
-	},
-	// Gestor de activos
+	// 2. Nemi (anteriormente Gestor de activos)
 	{
 		id: 3,
-		title: "Gestor de activos",
+		title: "Nemi",
 		description:
 			"Aplicaci\u00f3n web dise\u00f1ada para centralizar y administrar los equipos f\u00edsicos de una empresa, facilitando el control de inventario y las asignaciones de personal.",
 		image: "https://assets.portafolioweb.mgdc.site/nemi.png",
@@ -60,7 +47,28 @@ export const projects: Project[] = [
 			githubBackend: "https://github.com/ivndv/nemi-api",
 		},
 	},
-	// MXWatch
+	// 3. Tempo
+	{
+		id: 5,
+		title: "Tempo",
+		description:
+			"Aplicaci\u00f3n web de productividad que ayuda a gestionar el tiempo de trabajo y estudio mediante bloques de enfoque y descansos programados.",
+		image: "https://assets.portafolioweb.mgdc.site/tempo.png",
+		tags: [
+			"Astro",
+			"React",
+			"Hono",
+			"Better Auth",
+			"Drizzle ORM",
+			"Cloudflare D1",
+		],
+		links: {
+			demo: "https://tempo.mgdc.site/",
+			docs: "https://tempo.mgdc.site/api/docs",
+			github: "https://github.com/ivndv/tempo",
+		},
+	},
+	// 4. MXWatch
 	{
 		id: 4,
 		title: "MXWatch",
@@ -82,28 +90,33 @@ export const projects: Project[] = [
 			githubBackend: "https://github.com/ivndv/mxwatch-api",
 		},
 	},
-	// Tempo
+	// 5. Fluxblog (anteriormente Fluxdev Blog V1)
 	{
-		id: 5,
-		title: "Tempo",
+		id: 2,
+		title: "Fluxblog",
 		description:
-			"Aplicaci\u00f3n web de productividad que ayuda a gestionar el tiempo de trabajo y estudio mediante bloques de enfoque y descansos programados.",
-		image: "https://assets.portafolioweb.mgdc.site/tempo.png",
-		tags: [
-			"Astro",
-			"React",
-			"Hono",
-			"Better Auth",
-			"Drizzle ORM",
-			"Cloudflare D1",
-		],
+			"Fluxblog es un gestor de contenido dise\u00f1ado como un espacio personal y profesional para compartir art\u00edculos, tutoriales y experiencias sobre el desarrollo web.",
+		image: "https://assets.portafolioweb.mgdc.site/fluxdev.png",
+		tags: ["Astro", "Cloudflare", "D1 (SQLite)", "TailwindCSS"],
 		links: {
-			demo: "https://tempo.mgdc.site/",
-			docs: "https://tempo.mgdc.site/api/docs",
-			github: "https://github.com/ivndv/tempo",
+			demo: "https://fluxdev-nebula.mgdc.site/",
+			github: "https://github.com/ivndv/fluxdev-blog",
 		},
 	},
-	// Portafolio Web
+	// 6. Cosmos (anteriormente Space App V3)
+	{
+		id: 7,
+		title: "Cosmos",
+		description:
+			"Plataforma interactiva que permite explorar el universo, consultar noticias astron\u00f3micas y visualizar datos sobre el sistema solar.",
+		image: "https://assets.portafolioweb.mgdc.site/cosmos.png",
+		tags: ["React", "React Router", "API NASA", "CSS Modules"],
+		links: {
+			demo: "https://space-app-v3.pages.dev/",
+			github: "https://github.com/ivndv/cosmos",
+		},
+	},
+	// 7. Portafolio Web
 	{
 		id: 6,
 		title: "Portafolio Web",
@@ -123,25 +136,12 @@ export const projects: Project[] = [
 			github: "https://github.com/ivndv/ivandev-srvcs",
 		},
 	},
-	// Space App V3
-	{
-		id: 7,
-		title: "Space App V3",
-		description:
-			"Plataforma interactiva que permite explorar el universo, consultar noticias astron\u00f3micas y visualizar datos sobre el sistema solar.",
-		image: "https://assets.portafolioweb.mgdc.site/cosmos.png",
-		tags: ["React", "React Router", "API NASA", "CSS Modules"],
-		links: {
-			demo: "https://space-app-v3.pages.dev/",
-			github: "https://github.com/ivndv/cosmos",
-		},
-	},
-	// Fluxdev Blog V2
+	// 8. Fluxdev (anteriormente Fluxdev Blog V2)
 	{
 		id: 8,
-		title: "Fluxdev Blog V2",
+		title: "Fluxdev",
 		description:
-			"Fluxdev blog es un gestor de contenido avanzado dise\u00f1ado como un espacio personal y profesional para compartir art\u00edculos, tutoriales y experiencias sobre el desarrollo web.",
+			"Fluxdev es un gestor de contenido avanzado dise\u00f1ado como un espacio personal y profesional para compartir art\u00edculos, tutoriales y experiencias sobre el desarrollo web.",
 		image: "https://assets.portafolioweb.mgdc.site/fluxdev-v2.png",
 		tags: ["Astro", "React", "Payload CMS", "PostgreSQL", "Docker", "Tailwind"],
 		links: {

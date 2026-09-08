@@ -28,27 +28,23 @@ const Projects = () => {
 	}, [t.seo.proyectos]);
 
 	return (
-		<section className="min-h-screen bg-page-bg text-text-main py-20 px-4 sm:px-6 lg:px-8">
+		<section className="min-h-screen bg-page-bg text-text-main pt-32 pb-24 sm:pt-36 sm:pb-28 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
 			<div
 				ref={ref as React.RefObject<HTMLDivElement>}
-				className={`max-w-7xl mx-auto animate-on-scroll ${isVisible ? "visible" : ""}`}
+				className={`w-full max-w-5xl mx-auto animate-on-scroll ${isVisible ? "visible" : ""}`}
 			>
-				<div className="text-center mb-16 space-y-4 mt-16">
-					<h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+				{/* Encabezado */}
+				<div className="text-center mb-16 sm:mb-20 space-y-3">
+					<h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-text-main">
 						{t.proyectos.title}
 					</h2>
-
-					<div className="flex items-center justify-center gap-4">
-						<div className="h-px bg-text-main flex-1 rounded-full opacity-20 max-w-[100px]" />
-						<p className="text-text-muted text-lg italic">
-							{t.proyectos.subtitle}
-						</p>
-						<div className="h-px bg-text-main flex-1 rounded-full opacity-20 max-w-[100px]" />
-					</div>
+					<p className="text-text-muted text-sm sm:text-base max-w-xl mx-auto font-normal leading-relaxed">
+						{t.proyectos.subtitle}
+					</p>
 				</div>
 
 				{/* Lista de proyectos */}
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
 					{projects.map((project) => (
 						<article
 							key={project.id}
@@ -82,7 +78,8 @@ const Projects = () => {
 										{project.title.includes("Music") ||
 										project.title.includes("Flux") ? (
 											<MonitorPlay size={20} />
-										) : project.title.includes("Space") ? (
+										) : project.title.includes("Space") ||
+											project.title.includes("Cosmos") ? (
 											<Rocket size={20} />
 										) : project.title.includes("Pet") ? (
 											<Dog size={20} />

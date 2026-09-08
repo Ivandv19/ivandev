@@ -33,7 +33,7 @@ const Header = () => {
 	}));
 
 	return (
-		<header className="fixed top-0 w-full z-50 bg-surface-bg/95 backdrop-blur-sm border-b border-accent shadow-[0_0_20px_rgba(0,0,0,0.1)] dark:shadow-[0_0_25px_rgba(220,38,38,0.5)] transition-all duration-300">
+		<header className="fixed top-0 w-full z-50 bg-surface-bg/95 backdrop-blur-sm border-b border-surface-border shadow-sm transition-all duration-300">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="flex justify-between items-center h-16">
 					{/* Logo */}
@@ -111,7 +111,7 @@ const Header = () => {
 
 			{/* Menú desplegable mobile */}
 			{isMenuOpen && (
-				<div className="md:hidden bg-surface-bg border-t border-accent absolute w-full shadow-2xl">
+				<div className="md:hidden bg-surface-bg border-t border-surface-border absolute w-full shadow-2xl">
 					<div className="px-4 pt-2 pb-6 space-y-1">
 						{navLinks.map((link) => (
 							<Link

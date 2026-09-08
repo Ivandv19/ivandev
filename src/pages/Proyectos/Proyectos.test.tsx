@@ -16,8 +16,8 @@ describe("Página Proyectos", () => {
 
 		// Verificar que algunos proyectos específicos aparezcan
 		expect(screen.getByText("Fluxbeats")).toBeInTheDocument();
-		expect(screen.getByText("Gestor de activos")).toBeInTheDocument();
-		expect(screen.getByText("Space App V3")).toBeInTheDocument();
+		expect(screen.getByText("Nemi")).toBeInTheDocument();
+		expect(screen.getByText("Cosmos")).toBeInTheDocument();
 	});
 
 	it("contiene enlaces externos correctamente configurados", () => {

@@ -36,22 +36,19 @@ const Experience = () => {
 	];
 
 	return (
-		<section className="min-h-screen bg-page-bg text-text-main py-20 px-4 sm:px-6 lg:px-8">
+		<section className="min-h-screen bg-page-bg text-text-main pt-32 pb-24 sm:pt-36 sm:pb-28 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
 			<div
 				ref={ref as React.RefObject<HTMLDivElement>}
-				className={`max-w-4xl mx-auto animate-on-scroll ${isVisible ? "visible" : ""}`}
+				className={`w-full max-w-5xl mx-auto animate-on-scroll ${isVisible ? "visible" : ""}`}
 			>
-				<div className="text-center mb-16 space-y-4 mt-16">
-					<h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+				{/* Encabezado */}
+				<div className="text-center mb-16 sm:mb-20 space-y-3">
+					<h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-text-main">
 						{t.experiencia.title}
 					</h2>
-					<div className="flex items-center justify-center gap-4">
-						<div className="h-px bg-text-main flex-1 rounded-full opacity-20 max-w-[100px]"></div>
-						<p className="text-text-muted text-lg italic">
-							{t.experiencia.subtitle}
-						</p>
-						<div className="h-px bg-text-main flex-1 rounded-full opacity-20 max-w-[100px]"></div>
-					</div>
+					<p className="text-text-muted text-sm sm:text-base max-w-xl mx-auto font-normal leading-relaxed">
+						{t.experiencia.subtitle}
+					</p>
 				</div>
 
 				{/* Timeline de experiencia */}

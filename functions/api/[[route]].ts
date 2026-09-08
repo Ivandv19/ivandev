@@ -1,12 +1,12 @@
 // Hono
 import { Hono } from "hono";
 import { handle } from "hono/cloudflare-pages";
-// Validaciones
-import { ContactSchema } from "../_shared/schema";
-// Turnstile
-import { verifyTurnstile } from "../_shared/turnstile";
 // Email
-import { sendContactEmail } from "../_shared/email";
+import { sendContactEmail } from "../_services/emailService";
+// Turnstile
+import { verifyTurnstile } from "../_services/turnstileService";
+// Validaciones
+import { ContactSchema } from "../_validators/contactValidator";
 
 // Bindings del Worker: claves de Resend y Turnstile
 type Env = {
@@ -25,8 +25,7 @@ app.post("/api/contact", async (c) => {
 		const body = await c.req.json();
 		const parsed = ContactSchema.safeParse(body);
 		if (!parsed.success) {
-			const firstError =
-				parsed.error.issues[0]?.message ?? "Datos invalidos.";
+			const firstError = parsed.error.issues[0]?.message ?? "Datos invalidos.";
 			return c.json({ success: false, error: firstError }, 400);
 		}
 
@@ -49,8 +48,7 @@ app.post("/api/contact", async (c) => {
 
 		// 3. Enviar email mediante Resend
 		const toEmail = c.env.RESEND_TO_EMAIL || "ivangtx19@gmail.com";
-		const fromEmail =
-			c.env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
+		const fromEmail = c.env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
 
 		const { error } = await sendContactEmail(
 			c.env.RESEND_API_KEY,

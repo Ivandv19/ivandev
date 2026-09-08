@@ -1,7 +1,7 @@
 // Resend
 import { Resend } from "resend";
 // Sanitizacion
-import { escapeHtml } from "./sanitize";
+import { escapeHtml } from "../_validators/sanitizeValidator";
 
 // Construye el template HTML del email de contacto
 function buildEmailHtml(

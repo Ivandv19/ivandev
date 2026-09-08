@@ -56,8 +56,8 @@ export const projects: Project[] = [
 		links: {
 			demo: "https://nemi.mgdc.site/",
 			docs: "http://nemi-api.fluxdv.icu/api/docs",
-			githubFrontend: "https://github.com/Ivandv19/nemi",
-			githubBackend: "https://github.com/Ivandv19/nemi-api",
+			githubFrontend: "https://github.com/ivndv/nemi",
+			githubBackend: "https://github.com/ivndv/nemi-api",
 		},
 	},
 	// MXWatch
@@ -78,8 +78,8 @@ export const projects: Project[] = [
 		links: {
 			demo: "https://mxwatch.mgdc.site",
 			docs: "https://mxwatch-api.fluxdv.icu/api/docs",
-			githubFrontend: "https://github.com/Ivandv19/mxwatch",
-			githubBackend: "https://github.com/Ivandv19/mxwatch-api",
+			githubFrontend: "https://github.com/ivndv/mxwatch",
+			githubBackend: "https://github.com/ivndv/mxwatch-api",
 		},
 	},
 	// Tempo
@@ -100,7 +100,7 @@ export const projects: Project[] = [
 		links: {
 			demo: "https://tempo.mgdc.site/",
 			docs: "https://tempo.mgdc.site/api/docs",
-			github: "https://github.com/Ivandv19/tempo",
+			github: "https://github.com/ivndv/tempo",
 		},
 	},
 	// Portafolio Web

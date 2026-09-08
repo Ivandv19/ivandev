@@ -29,7 +29,7 @@ const Footer = () => {
 						<div className="flex flex-wrap gap-3">
 							{/* biome-ignore lint/a11y/useAnchorContent: aria-label is sufficient for icon-only links */}
 							<a
-								href="https://github.com/Ivandv19"
+								href="https://github.com/ivndv"
 								target="_blank"
 								rel="noreferrer"
 								aria-label="GitHub"
@@ -54,7 +54,7 @@ const Footer = () => {
 								/>
 							</a>
 							<a
-								href="https://discord.com/users/ivandv19"
+								href="https://discord.com/users/ivndv1"
 								target="_blank"
 								rel="noreferrer"
 								aria-label="Discord"

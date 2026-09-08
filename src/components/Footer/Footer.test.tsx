@@ -38,7 +38,7 @@ describe("Componente Footer", () => {
 
 		const links = screen.getAllByRole("link");
 		const githubExists = links.some(
-			(link) => link.getAttribute("href") === "https://github.com/Ivandv19",
+			(link) => link.getAttribute("href") === "https://github.com/ivndv",
 		);
 		const linkedinExists = links.some(
 			(link) =>

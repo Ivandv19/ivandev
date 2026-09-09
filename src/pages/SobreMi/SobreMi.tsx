@@ -30,28 +30,25 @@ const SobreMi = () => {
 		);
 
 	return (
-		<section className="min-h-screen bg-page-bg text-text-main py-20 px-4 sm:px-6 lg:px-8">
+		<section className="min-h-screen bg-page-bg text-text-main pt-32 pb-24 sm:pt-36 sm:pb-28 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
 			<div
 				ref={ref as React.RefObject<HTMLDivElement>}
-				className={`max-w-6xl mx-auto animate-on-scroll ${isVisible ? "visible" : ""}`}
+				className={`w-full max-w-5xl mx-auto animate-on-scroll ${isVisible ? "visible" : ""}`}
 			>
-				<div className="text-center mb-16 space-y-4 mt-16">
-					<h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+				{/* Encabezado */}
+				<div className="text-center mb-16 sm:mb-20 space-y-3">
+					<h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-text-main">
 						{t.sobreMi.title}
 					</h2>
-					<div className="flex items-center justify-center gap-4">
-						<div className="h-px bg-text-main flex-1 rounded-full opacity-20 max-w-[100px]"></div>
-						<p className="text-text-muted text-lg italic">
-							{t.sobreMi.subtitle}
-						</p>
-						<div className="h-px bg-text-main flex-1 rounded-full opacity-20 max-w-[100px]"></div>
-					</div>
+					<p className="text-text-muted text-sm sm:text-base max-w-xl mx-auto font-normal leading-relaxed">
+						{t.sobreMi.subtitle}
+					</p>
 				</div>
 
 				<div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 					{/* Info personal */}
 					<div className="lg:col-span-1 space-y-6">
-						<div className="bg-surface-bg p-6 rounded-2xl border border-surface-border shadow-sm">
+						<div className="bg-surface-bg p-6 rounded-xl border border-surface-border shadow-sm">
 							<h3 className="text-xl font-bold mb-6 border-b border-surface-border/50 pb-2">
 								{t.sobreMi.infoTitulo}
 							</h3>
@@ -107,7 +104,7 @@ const SobreMi = () => {
 										<span className="block text-xs font-bold text-text-muted/70 uppercase tracking-wider">
 											{t.sobreMi.estado}
 										</span>
-										<span className="font-medium text-green-600 bg-green-50 px-2 py-0.5 rounded-full text-xs inline-block mt-1">
+										<span className="font-medium text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-full text-xs inline-block mt-1">
 											{t.sobreMi.estadoValor}
 										</span>
 									</div>
@@ -118,7 +115,7 @@ const SobreMi = () => {
 
 					{/* Párrafos descriptivos */}
 					<div className="lg:col-span-2">
-						<div className="bg-surface-bg p-8 md:p-10 rounded-2xl border border-surface-border shadow-sm leading-relaxed text-lg text-text-muted space-y-6">
+						<div className="bg-surface-bg p-6 sm:p-8 md:p-10 rounded-xl border border-surface-border shadow-sm leading-relaxed text-base sm:text-lg text-text-muted space-y-6">
 							<p>{renderParrafo(t.sobreMi.parrafo1)}</p>
 							<p>{renderParrafo(t.sobreMi.parrafo2)}</p>
 							<div>{renderParrafo(t.sobreMi.parrafo3)}</div>

@@ -80,7 +80,7 @@ export const es = {
 		formacion: "Formación",
 		formacionValor: "Autodidacta / Téc. Informática",
 		estado: "Estado",
-		estadoValor: "Open to Work",
+		estadoValor: "Disponible para trabajar",
 		parrafo1: [
 			{ text: "Soy ", bold: false },
 			{ text: "Ivan Cruz", bold: true },
@@ -129,6 +129,11 @@ export const es = {
 	formacion: {
 		title: "Mi Formación Académica",
 		subtitle: "Certificaciones y Estudios",
+		competencias: "Competencias Adquiridas:",
+		completado: "Completado",
+		certificado: "Certificado obtenido",
+		enCurso: "En Curso",
+		cursando: "Actualmente cursando",
 	},
 	contacto: {
 		title: "Ponte en Contacto",

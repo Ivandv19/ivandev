@@ -86,22 +86,19 @@ const Formacion = () => {
 	];
 
 	return (
-		<section className="min-h-screen bg-page-bg text-text-main py-20 px-4 sm:px-6 lg:px-8">
+		<section className="min-h-screen bg-page-bg text-text-main pt-32 pb-24 sm:pt-36 sm:pb-28 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
 			<div
 				ref={ref as React.RefObject<HTMLDivElement>}
-				className={`max-w-5xl mx-auto animate-on-scroll ${isVisible ? "visible" : ""}`}
+				className={`w-full max-w-5xl mx-auto animate-on-scroll ${isVisible ? "visible" : ""}`}
 			>
-				<div className="text-center mb-16 space-y-4 mt-16">
-					<h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+				{/* Encabezado */}
+				<div className="text-center mb-16 sm:mb-20 space-y-3">
+					<h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-text-main">
 						{t.formacion.title}
 					</h2>
-					<div className="flex items-center justify-center gap-4">
-						<div className="h-px bg-text-main flex-1 rounded-full opacity-20 max-w-[100px]"></div>
-						<p className="text-text-muted text-lg italic">
-							{t.formacion.subtitle}
-						</p>
-						<div className="h-px bg-text-main flex-1 rounded-full opacity-20 max-w-[100px]"></div>
-					</div>
+					<p className="text-text-muted text-sm sm:text-base max-w-xl mx-auto font-normal leading-relaxed">
+						{t.formacion.subtitle}
+					</p>
 				</div>
 
 				{/* Lista de formación */}
@@ -109,7 +106,7 @@ const Formacion = () => {
 					{educationData.map((edu) => (
 						<div
 							key={edu.id}
-							className="bg-surface-bg rounded-2xl p-6 md:p-8 border border-surface-border shadow-sm hover:shadow-[0_4px_20px_rgba(0,0,0,0.15)] relative overflow-hidden group"
+							className="bg-surface-bg rounded-xl p-6 md:p-8 border border-surface-border shadow-sm hover:shadow-[0_4px_20px_rgba(0,0,0,0.15)] relative overflow-hidden group"
 						>
 							<div className="absolute -right-6 -bottom-6 text-page-bg group-hover:text-accent-muted/50">
 								<Award size={180} strokeWidth={0.5} />
@@ -125,7 +122,7 @@ const Formacion = () => {
 											{edu.type}
 										</span>
 									</div>
-									<h3 className="text-2xl font-bold text-text-main mb-2">
+									<h3 className="text-xl sm:text-2xl font-bold text-text-main mb-2">
 										{edu.title}
 									</h3>
 
@@ -151,7 +148,7 @@ const Formacion = () => {
 									<div>
 										<h4 className="text-sm font-bold text-text-main mb-3 flex items-center gap-2">
 											<CheckCircle2 size={14} className="text-accent" />{" "}
-											Competencias Adquiridas:
+											{t.formacion.competencias}
 										</h4>
 										<div className="flex flex-wrap gap-2">
 											{edu.skills.map((skill) => (
@@ -169,26 +166,26 @@ const Formacion = () => {
 								<div className="md:w-1/4 flex flex-col justify-center items-center border-t md:border-t-0 md:border-l border-surface-border/50 pt-6 md:pt-0 md:pl-6 mt-6 md:mt-0">
 									{edu.certified ? (
 										<div className="text-center">
-											<div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-3 text-green-600">
-												<Award size={32} />
+											<div className="w-14 h-14 bg-emerald-500/10 dark:bg-emerald-500/15 border border-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-2.5 text-emerald-600 dark:text-emerald-400">
+												<Award size={28} />
 											</div>
-											<span className="block font-bold text-green-700">
-												Completado
+											<span className="block font-bold text-emerald-600 dark:text-emerald-400 text-sm">
+												{t.formacion.completado}
 											</span>
-											<span className="text-xs text-green-600">
-												Certificado obtenido
+											<span className="text-xs text-text-muted">
+												{t.formacion.certificado}
 											</span>
 										</div>
 									) : (
 										<div className="text-center">
-											<div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-3 text-blue-600 animate-pulse">
-												<BookOpen size={32} />
+											<div className="w-14 h-14 bg-sky-500/10 dark:bg-sky-500/15 border border-sky-500/20 rounded-full flex items-center justify-center mx-auto mb-2.5 text-sky-600 dark:text-sky-400 animate-pulse">
+												<BookOpen size={28} />
 											</div>
-											<span className="block font-bold text-blue-700">
-												En Curso
+											<span className="block font-bold text-sky-600 dark:text-sky-400 text-sm">
+												{t.formacion.enCurso}
 											</span>
-											<span className="text-xs text-blue-600">
-												Actualmente cursando
+											<span className="text-xs text-text-muted">
+												{t.formacion.cursando}
 											</span>
 										</div>
 									)}

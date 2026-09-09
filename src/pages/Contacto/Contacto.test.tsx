@@ -23,7 +23,7 @@ describe("Página Contacto", () => {
 		render(<Contacto />);
 
 		expect(screen.getByText(/Ponte en Contacto/i)).toBeInTheDocument();
-		expect(screen.getByText("ivangtx19@gmail.com")).toBeInTheDocument();
+		expect(screen.getByText("ivangtx19@proton.me")).toBeInTheDocument();
 		expect(screen.getByText("+52 56 5745 5765")).toBeInTheDocument();
 	});
 
@@ -36,7 +36,7 @@ describe("Página Contacto", () => {
 
 		fireEvent.click(emailCopyButton);
 
-		expect(mockWriteText).toHaveBeenCalledWith("ivangtx19@gmail.com");
+		expect(mockWriteText).toHaveBeenCalledWith("ivangtx19@proton.me");
 	});
 
 	it("renderiza el formulario con todos los campos", () => {

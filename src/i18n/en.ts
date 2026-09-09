@@ -131,6 +131,11 @@ export const en: Translations = {
 	formacion: {
 		title: "My Academic Background",
 		subtitle: "Certifications and Studies",
+		competencias: "Acquired Skills:",
+		completado: "Completed",
+		certificado: "Certificate obtained",
+		enCurso: "In Progress",
+		cursando: "Currently studying",
 	},
 	contacto: {
 		title: "Get in Touch",

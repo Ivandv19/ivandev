@@ -47,7 +47,7 @@ app.post("/api/contact", async (c) => {
 		}
 
 		// 3. Enviar email mediante Resend
-		const toEmail = c.env.RESEND_TO_EMAIL || "ivangtx19@gmail.com";
+		const toEmail = c.env.RESEND_TO_EMAIL || "ivangtx19@proton.me";
 		const fromEmail = c.env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
 
 		const { error } = await sendContactEmail(

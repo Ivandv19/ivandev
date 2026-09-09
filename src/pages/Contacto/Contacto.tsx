@@ -84,41 +84,38 @@ const Contacto = () => {
 	};
 
 	return (
-		<section className="min-h-screen bg-page-bg text-text-main py-20 px-4 sm:px-6 lg:px-8">
+		<section className="min-h-screen bg-page-bg text-text-main pt-32 pb-24 sm:pt-36 sm:pb-28 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
 			<div
 				ref={ref as React.RefObject<HTMLDivElement>}
-				className={`max-w-6xl mx-auto animate-on-scroll ${isVisible ? "visible" : ""}`}
+				className={`w-full max-w-5xl mx-auto animate-on-scroll ${isVisible ? "visible" : ""}`}
 			>
-				<div className="text-center mb-16 space-y-4 mt-16">
-					<h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+				{/* Encabezado */}
+				<div className="text-center mb-16 sm:mb-20 space-y-3">
+					<h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-text-main">
 						{t.contacto.title}
 					</h2>
-					<div className="flex items-center justify-center gap-4">
-						<div className="h-px bg-text-main flex-1 rounded-full opacity-20 max-w-[100px]" />
-						<p className="text-text-muted text-lg italic">
-							{t.contacto.subtitle}
-						</p>
-						<div className="h-px bg-text-main flex-1 rounded-full opacity-20 max-w-[100px]" />
-					</div>
+					<p className="text-text-muted text-sm sm:text-base max-w-xl mx-auto font-normal leading-relaxed">
+						{t.contacto.subtitle}
+					</p>
 				</div>
 
 				<div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
 					{/* Tarjetas de contacto */}
 					<div className="lg:col-span-2 space-y-6">
 						{/* Email */}
-						<div className="bg-surface-bg p-6 rounded-2xl border border-surface-border shadow-sm hover:shadow-md transition-shadow group">
+						<div className="bg-surface-bg p-6 rounded-xl border border-surface-border shadow-sm hover:shadow-md transition-shadow group">
 							<div className="flex items-start justify-between mb-4">
 								<div className="p-3 bg-accent-muted text-accent rounded-xl group-hover:bg-accent group-hover:text-white transition-colors duration-300">
 									<Mail size={24} />
 								</div>
 								<button
 									type="button"
-									onClick={() => handleCopy("ivangtx19@gmail.com", "email")}
+									onClick={() => handleCopy("ivangtx19@proton.me", "email")}
 									className="text-text-muted/50 hover:text-text-muted transition-colors"
 									title={t.contacto.copiar}
 								>
 									{copiedField === "email" ? (
-										<Check size={20} className="text-green-500" />
+										<Check size={20} className="text-emerald-500" />
 									) : (
 										<Copy size={20} />
 									)}
@@ -131,17 +128,17 @@ const Contacto = () => {
 								{t.contacto.emailDesc}
 							</p>
 							<a
-								href="mailto:ivangtx19@gmail.com"
+								href="mailto:ivangtx19@proton.me"
 								className="text-lg font-semibold text-text-main hover:text-accent transition-colors break-all"
 							>
-								ivangtx19@gmail.com
+								ivangtx19@proton.me
 							</a>
 						</div>
 
 						{/* WhatsApp */}
-						<div className="bg-surface-bg p-6 rounded-2xl border border-surface-border shadow-sm hover:shadow-md transition-shadow group">
+						<div className="bg-surface-bg p-6 rounded-xl border border-surface-border shadow-sm hover:shadow-md transition-shadow group">
 							<div className="flex items-start justify-between mb-4">
-								<div className="p-3 bg-green-50 text-green-600 rounded-xl group-hover:bg-green-600 group-hover:text-white transition-colors duration-300">
+								<div className="p-3 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 rounded-xl group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
 									<MessageCircle size={24} />
 								</div>
 								<button
@@ -151,7 +148,7 @@ const Contacto = () => {
 									title={t.contacto.copiarPhone}
 								>
 									{copiedField === "phone" ? (
-										<Check size={20} className="text-green-500" />
+										<Check size={20} className="text-emerald-500" />
 									) : (
 										<Copy size={20} />
 									)}
@@ -167,14 +164,14 @@ const Contacto = () => {
 								href="https://wa.me/525657455765"
 								target="_blank"
 								rel="noreferrer"
-								className="text-lg font-semibold text-text-main hover:text-green-600 transition-colors"
+								className="text-lg font-semibold text-text-main hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
 							>
 								+52 56 5745 5765
 							</a>
 						</div>
 
 						{/* Ubicación */}
-						<div className="bg-surface-bg p-6 rounded-2xl border border-surface-border shadow-sm flex items-center gap-4">
+						<div className="bg-surface-bg p-6 rounded-xl border border-surface-border shadow-sm flex items-center gap-4">
 							<div className="p-3 bg-surface-border/50 text-text-muted rounded-xl">
 								<MapPin size={24} />
 							</div>
@@ -191,14 +188,14 @@ const Contacto = () => {
 
 					{/* Formulario */}
 					<div className="lg:col-span-3">
-						<div className="bg-surface-bg p-8 md:p-10 rounded-2xl border border-surface-border shadow-lg">
+						<div className="bg-surface-bg p-6 sm:p-8 md:p-10 rounded-xl border border-surface-border shadow-sm">
 							<h3 className="text-2xl font-bold mb-6">
 								{t.contacto.formTitulo}
 							</h3>
 
 							{/* Mensaje de éxito */}
 							{status === "success" && (
-								<div className="mb-6 p-4 bg-green-50 border border-green-200 text-green-700 rounded-xl flex items-center gap-3">
+								<div className="mb-6 p-4 bg-emerald-500/10 border border-emerald-500/20 text-emerald-700 dark:text-emerald-400 rounded-xl flex items-center gap-3">
 									<Check size={20} />
 									<span className="font-medium">{t.contacto.success}</span>
 								</div>
@@ -206,7 +203,7 @@ const Contacto = () => {
 
 							{/* Mensaje de error */}
 							{status === "error" && (
-								<div className="mb-6 p-4 bg-red-50 border border-red-200 text-red-700 rounded-xl text-sm">
+								<div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 text-red-700 dark:text-red-400 rounded-xl text-sm">
 									{errorMsg || t.contacto.error}
 								</div>
 							)}

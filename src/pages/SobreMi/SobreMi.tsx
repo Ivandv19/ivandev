@@ -49,7 +49,7 @@ const SobreMi = () => {
 					{/* Info personal */}
 					<div className="lg:col-span-1 space-y-6">
 						<div className="bg-surface-bg p-6 rounded-xl border border-surface-border shadow-sm">
-							<h3 className="text-xl font-bold mb-6 border-b border-surface-border/50 pb-2">
+							<h3 className="text-lg font-bold mb-6 border-b border-surface-border/50 pb-2">
 								{t.sobreMi.infoTitulo}
 							</h3>
 
@@ -62,7 +62,7 @@ const SobreMi = () => {
 										<span className="block text-xs font-bold text-text-muted/70 uppercase tracking-wider">
 											{t.sobreMi.edad}
 										</span>
-										<span className="font-medium text-text-main">
+										<span className="text-sm font-medium text-text-main">
 											{t.sobreMi.edadValor}
 										</span>
 									</div>
@@ -76,7 +76,7 @@ const SobreMi = () => {
 										<span className="block text-xs font-bold text-text-muted/70 uppercase tracking-wider">
 											{t.sobreMi.ubicacion}
 										</span>
-										<span className="font-medium text-text-main">
+										<span className="text-sm font-medium text-text-main">
 											{t.sobreMi.ubicacionValor}
 										</span>
 									</div>
@@ -90,7 +90,7 @@ const SobreMi = () => {
 										<span className="block text-xs font-bold text-text-muted/70 uppercase tracking-wider">
 											{t.sobreMi.formacion}
 										</span>
-										<span className="font-medium text-text-main">
+										<span className="text-sm font-medium text-text-main">
 											{t.sobreMi.formacionValor}
 										</span>
 									</div>
@@ -115,7 +115,7 @@ const SobreMi = () => {
 
 					{/* Párrafos descriptivos */}
 					<div className="lg:col-span-2">
-						<div className="bg-surface-bg p-6 sm:p-8 md:p-10 rounded-xl border border-surface-border shadow-sm leading-relaxed text-base sm:text-lg text-text-muted space-y-6">
+						<div className="bg-surface-bg p-6 sm:p-8 rounded-xl border border-surface-border shadow-sm leading-relaxed text-sm sm:text-base text-text-muted space-y-5">
 							<p>{renderParrafo(t.sobreMi.parrafo1)}</p>
 							<p>{renderParrafo(t.sobreMi.parrafo2)}</p>
 							<div>{renderParrafo(t.sobreMi.parrafo3)}</div>

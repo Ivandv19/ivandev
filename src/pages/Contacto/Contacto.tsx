@@ -103,10 +103,10 @@ const Contacto = () => {
 					{/* Tarjetas de contacto */}
 					<div className="lg:col-span-2 space-y-6">
 						{/* Email */}
-						<div className="bg-surface-bg p-6 rounded-xl border border-surface-border shadow-sm hover:shadow-md transition-shadow group">
+						<div className="bg-surface-bg p-5 sm:p-6 rounded-xl border border-surface-border shadow-sm hover:shadow-md transition-shadow group">
 							<div className="flex items-start justify-between mb-4">
-								<div className="p-3 bg-accent-muted text-accent rounded-xl group-hover:bg-accent group-hover:text-white transition-colors duration-300">
-									<Mail size={24} />
+								<div className="p-2.5 bg-accent-muted text-accent rounded-xl group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+									<Mail size={22} />
 								</div>
 								<button
 									type="button"
@@ -115,31 +115,31 @@ const Contacto = () => {
 									title={t.contacto.copiar}
 								>
 									{copiedField === "email" ? (
-										<Check size={20} className="text-emerald-500" />
+										<Check size={18} className="text-emerald-500" />
 									) : (
-										<Copy size={20} />
+										<Copy size={18} />
 									)}
 								</button>
 							</div>
-							<h3 className="text-lg font-bold text-text-main mb-1">
+							<h3 className="text-base font-bold text-text-main mb-1">
 								{t.contacto.emailTitulo}
 							</h3>
-							<p className="text-text-muted text-sm mb-4">
+							<p className="text-text-muted text-xs sm:text-sm mb-3">
 								{t.contacto.emailDesc}
 							</p>
 							<a
 								href="mailto:ivangtx19@proton.me"
-								className="text-lg font-semibold text-text-main hover:text-accent transition-colors break-all"
+								className="text-sm sm:text-base font-semibold text-text-main hover:text-accent transition-colors break-all"
 							>
 								ivangtx19@proton.me
 							</a>
 						</div>
 
 						{/* WhatsApp */}
-						<div className="bg-surface-bg p-6 rounded-xl border border-surface-border shadow-sm hover:shadow-md transition-shadow group">
+						<div className="bg-surface-bg p-5 sm:p-6 rounded-xl border border-surface-border shadow-sm hover:shadow-md transition-shadow group">
 							<div className="flex items-start justify-between mb-4">
-								<div className="p-3 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 rounded-xl group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
-									<MessageCircle size={24} />
+								<div className="p-2.5 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 rounded-xl group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
+									<MessageCircle size={22} />
 								</div>
 								<button
 									type="button"
@@ -148,38 +148,38 @@ const Contacto = () => {
 									title={t.contacto.copiarPhone}
 								>
 									{copiedField === "phone" ? (
-										<Check size={20} className="text-emerald-500" />
+										<Check size={18} className="text-emerald-500" />
 									) : (
-										<Copy size={20} />
+										<Copy size={18} />
 									)}
 								</button>
 							</div>
-							<h3 className="text-lg font-bold text-text-main mb-1">
+							<h3 className="text-base font-bold text-text-main mb-1">
 								{t.contacto.whatsappTitulo}
 							</h3>
-							<p className="text-text-muted text-sm mb-4">
+							<p className="text-text-muted text-xs sm:text-sm mb-3">
 								{t.contacto.whatsappDesc}
 							</p>
 							<a
 								href="https://wa.me/525657455765"
 								target="_blank"
 								rel="noreferrer"
-								className="text-lg font-semibold text-text-main hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+								className="text-sm sm:text-base font-semibold text-text-main hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
 							>
 								+52 56 5745 5765
 							</a>
 						</div>
 
 						{/* Ubicación */}
-						<div className="bg-surface-bg p-6 rounded-xl border border-surface-border shadow-sm flex items-center gap-4">
-							<div className="p-3 bg-surface-border/50 text-text-muted rounded-xl">
-								<MapPin size={24} />
+						<div className="bg-surface-bg p-5 sm:p-6 rounded-xl border border-surface-border shadow-sm flex items-center gap-4">
+							<div className="p-2.5 bg-surface-border/50 text-text-muted rounded-xl">
+								<MapPin size={22} />
 							</div>
 							<div>
-								<h3 className="font-bold text-text-main">
+								<h3 className="text-sm font-bold text-text-main">
 									{t.contacto.ubicacionTitulo}
 								</h3>
-								<p className="text-text-muted text-sm">
+								<p className="text-text-muted text-xs sm:text-sm">
 									{t.contacto.ubicacionValor}
 								</p>
 							</div>
@@ -188,15 +188,15 @@ const Contacto = () => {
 
 					{/* Formulario */}
 					<div className="lg:col-span-3">
-						<div className="bg-surface-bg p-6 sm:p-8 md:p-10 rounded-xl border border-surface-border shadow-sm">
-							<h3 className="text-2xl font-bold mb-6">
+						<div className="bg-surface-bg p-6 sm:p-8 rounded-xl border border-surface-border shadow-sm">
+							<h3 className="text-lg sm:text-xl font-bold mb-6 text-text-main">
 								{t.contacto.formTitulo}
 							</h3>
 
 							{/* Mensaje de éxito */}
 							{status === "success" && (
-								<div className="mb-6 p-4 bg-emerald-500/10 border border-emerald-500/20 text-emerald-700 dark:text-emerald-400 rounded-xl flex items-center gap-3">
-									<Check size={20} />
+								<div className="mb-6 p-4 bg-emerald-500/10 border border-emerald-500/20 text-emerald-700 dark:text-emerald-400 rounded-xl flex items-center gap-3 text-sm">
+									<Check size={18} />
 									<span className="font-medium">{t.contacto.success}</span>
 								</div>
 							)}
@@ -208,13 +208,13 @@ const Contacto = () => {
 								</div>
 							)}
 
-							<form onSubmit={handleSubmit} className="space-y-6">
+							<form onSubmit={handleSubmit} className="space-y-5">
 								{/* Nombre y Email */}
-								<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-									<div className="space-y-2">
+								<div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+									<div className="space-y-1.5">
 										<label
 											htmlFor="name"
-											className="text-sm font-semibold text-text-muted"
+											className="text-xs font-semibold text-text-muted"
 										>
 											{t.contacto.labelNombre}
 										</label>
@@ -225,13 +225,13 @@ const Contacto = () => {
 											onChange={handleChange}
 											required
 											placeholder={t.contacto.placeholderNombre}
-											className="w-full px-4 py-3 rounded-lg bg-page-bg border border-surface-border focus:border-accent focus:bg-surface-bg focus:ring-2 focus:ring-accent/30 outline-none"
+											className="w-full px-3.5 py-2.5 rounded-lg bg-page-bg border border-surface-border focus:border-accent focus:bg-surface-bg focus:ring-2 focus:ring-accent/30 outline-none text-sm"
 										/>
 									</div>
-									<div className="space-y-2">
+									<div className="space-y-1.5">
 										<label
 											htmlFor="email"
-											className="text-sm font-semibold text-text-muted"
+											className="text-xs font-semibold text-text-muted"
 										>
 											{t.contacto.labelEmail}
 										</label>
@@ -242,16 +242,16 @@ const Contacto = () => {
 											onChange={handleChange}
 											required
 											placeholder={t.contacto.placeholderEmail}
-											className="w-full px-4 py-3 rounded-lg bg-page-bg border border-surface-border focus:border-accent focus:bg-surface-bg focus:ring-2 focus:ring-accent/30 outline-none"
+											className="w-full px-3.5 py-2.5 rounded-lg bg-page-bg border border-surface-border focus:border-accent focus:bg-surface-bg focus:ring-2 focus:ring-accent/30 outline-none text-sm"
 										/>
 									</div>
 								</div>
 
 								{/* Asunto */}
-								<div className="space-y-2">
+								<div className="space-y-1.5">
 									<label
 										htmlFor="subject"
-										className="text-sm font-semibold text-text-muted"
+										className="text-xs font-semibold text-text-muted"
 									>
 										{t.contacto.labelAsunto}
 									</label>
@@ -262,15 +262,15 @@ const Contacto = () => {
 										onChange={handleChange}
 										required
 										placeholder={t.contacto.placeholderAsunto}
-										className="w-full px-4 py-3 rounded-lg bg-page-bg border border-surface-border focus:border-accent focus:bg-surface-bg focus:ring-2 focus:ring-accent/30 outline-none"
+										className="w-full px-3.5 py-2.5 rounded-lg bg-page-bg border border-surface-border focus:border-accent focus:bg-surface-bg focus:ring-2 focus:ring-accent/30 outline-none text-sm"
 									/>
 								</div>
 
 								{/* Mensaje */}
-								<div className="space-y-2">
+								<div className="space-y-1.5">
 									<label
 										htmlFor="message"
-										className="text-sm font-semibold text-text-muted"
+										className="text-xs font-semibold text-text-muted"
 									>
 										{t.contacto.labelMensaje}
 									</label>
@@ -281,7 +281,7 @@ const Contacto = () => {
 										onChange={handleChange}
 										required
 										placeholder={t.contacto.placeholderMensaje}
-										className="w-full px-4 py-3 rounded-lg bg-page-bg border border-surface-border focus:border-accent focus:bg-surface-bg focus:ring-2 focus:ring-accent/30 outline-none resize-none"
+										className="w-full px-3.5 py-2.5 rounded-lg bg-page-bg border border-surface-border focus:border-accent focus:bg-surface-bg focus:ring-2 focus:ring-accent/30 outline-none resize-none text-sm"
 									/>
 								</div>
 
@@ -295,12 +295,12 @@ const Contacto = () => {
 								<button
 									type="submit"
 									disabled={status === "loading" || !turnstileToken}
-									className="w-full bg-accent hover:opacity-90 disabled:opacity-50 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2"
+									className="w-full bg-accent hover:opacity-90 disabled:opacity-50 text-white font-bold py-2.5 px-5 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 text-sm"
 								>
 									{status === "loading" ? (
-										<Loader2 size={20} className="animate-spin" />
+										<Loader2 size={18} className="animate-spin" />
 									) : (
-										<Send size={20} />
+										<Send size={18} />
 									)}
 									{status === "loading"
 										? t.contacto.enviando

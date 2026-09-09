@@ -116,45 +116,45 @@ const Formacion = () => {
 								<div className="flex-1">
 									<div className="flex items-center gap-3 mb-2">
 										<span className="bg-accent-muted text-accent p-2 rounded-lg">
-											<GraduationCap size={24} />
+											<GraduationCap size={20} />
 										</span>
-										<span className="text-sm font-bold text-accent uppercase tracking-wider">
+										<span className="text-xs font-bold text-accent uppercase tracking-wider">
 											{edu.type}
 										</span>
 									</div>
-									<h3 className="text-xl sm:text-2xl font-bold text-text-main mb-2">
+									<h3 className="text-lg sm:text-xl font-bold text-text-main mb-2">
 										{edu.title}
 									</h3>
 
-									<div className="flex flex-wrap items-center gap-4 text-text-muted mb-4 font-medium">
+									<div className="flex flex-wrap items-center gap-3 text-xs sm:text-sm text-text-muted mb-3.5 font-medium">
 										<span className="flex items-center gap-1.5">
-											<BookOpen size={16} className="text-accent" />
+											<BookOpen size={15} className="text-accent" />
 											{edu.institution}
 										</span>
 										<span className="hidden md:inline text-surface-border">
 											|
 										</span>
-										<span className="flex items-center gap-1.5 bg-surface-border/50 px-3 py-1 rounded-full text-sm text-text-main">
-											<Calendar size={14} />
+										<span className="flex items-center gap-1.5 bg-surface-border/50 px-2.5 py-0.5 rounded-full text-xs text-text-main">
+											<Calendar size={13} />
 											{edu.date}
 										</span>
 									</div>
 
-									<p className="text-text-muted leading-relaxed mb-6 max-w-2xl">
+									<p className="text-text-muted text-sm leading-relaxed mb-5 max-w-2xl">
 										{edu.description}
 									</p>
 
 									{/* Competencias */}
 									<div>
-										<h4 className="text-sm font-bold text-text-main mb-3 flex items-center gap-2">
-											<CheckCircle2 size={14} className="text-accent" />{" "}
+										<h4 className="text-xs font-bold text-text-main mb-2.5 flex items-center gap-1.5 uppercase tracking-wider">
+											<CheckCircle2 size={13} className="text-accent" />{" "}
 											{t.formacion.competencias}
 										</h4>
 										<div className="flex flex-wrap gap-2">
 											{edu.skills.map((skill) => (
 												<span
 													key={skill}
-													className="px-3 py-1 bg-surface-border/30 text-text-muted text-xs font-semibold rounded-md border border-surface-border group-hover:border-accent-muted group-hover:bg-page-bg transition-colors"
+													className="px-2.5 py-1 bg-surface-border/30 text-text-muted text-xs font-medium rounded-md border border-surface-border group-hover:border-accent-muted group-hover:bg-page-bg transition-colors"
 												>
 													{skill}
 												</span>
